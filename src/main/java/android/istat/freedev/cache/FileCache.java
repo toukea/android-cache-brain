@@ -7,10 +7,6 @@ import android.istat.freedev.cache.interfaces.CacheEventListener;
  */
 
 public class FileCache extends Cache {
-    @Override
-    public void setCacheEventListener(CacheEventListener listener) {
-
-    }
 
     @Override
     public Object get(String key) {
@@ -29,11 +25,6 @@ public class FileCache extends Cache {
 
     @Override
     public long getEntryLiveTime() {
-        return 0;
-    }
-
-    @Override
-    public long getEntryInsertTime() {
         return 0;
     }
 

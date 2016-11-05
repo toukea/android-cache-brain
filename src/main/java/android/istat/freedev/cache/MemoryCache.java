@@ -8,7 +8,7 @@ import android.istat.freedev.cache.interfaces.CacheEventListener;
 
 public class MemoryCache extends Cache {
     @Override
-    public void setCacheEventListener(CacheEventListener listener) {
+    public void registerCacheEventListener(CacheEventListener listener) {
 
     }
 
@@ -29,11 +29,6 @@ public class MemoryCache extends Cache {
 
     @Override
     public long getEntryLiveTime() {
-        return 0;
-    }
-
-    @Override
-    public long getEntryInsertTime() {
         return 0;
     }
 

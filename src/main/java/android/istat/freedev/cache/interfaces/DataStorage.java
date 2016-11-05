@@ -5,7 +5,9 @@ package android.istat.freedev.cache.interfaces;
  */
 
 public interface DataStorage<T> {
-    public void setCacheEventListener(CacheEventListener<T, ?> listener);
+    public void registerCacheEventListener(CacheEventListener<T, ?> listener);
+
+    public void unregisterCacheEventListener(CacheEventListener<T, ?> listener);
 
     public T get(String key);
 
@@ -15,7 +17,7 @@ public interface DataStorage<T> {
 
     public long getEntryLiveTime();
 
-    public long getEntryInsertTime();
+    public long getEntryInsertTime(String key);
 
     public boolean contain(String key);
 
